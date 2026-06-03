@@ -50,6 +50,15 @@ app.listen(port, () => {
 // ✅ The workflow - Edit → Save → Test
 // ✅ Node.js fundamentals - Code loads once, restart to reload
 
+// # After making changes in peoject and let it visible in git also so , In your terminal:
+
+// git add .
+// git commit -m "Added new lines"
+// git push
+
+// # NOW check GitHub
+// // # Your changes will be visible! ✅
+
 
                                                     // Express does this automatically:
 // User visits /chai
