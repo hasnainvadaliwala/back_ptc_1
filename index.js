@@ -7,6 +7,51 @@ const app = express()
 //doesnt matter what the port value is,that port number that is going to be used is in the .env file because of process.env.PORT
 const port = process.env.PORT
 
+
+const githubData = {
+
+  "login": "hasnainvadaliwala",
+  "id": 188853879,
+  "node_id": "U_kgDOC0Gudw",
+  "avatar_url": "https://avatars.githubusercontent.com/u/188853879?v=4",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/hasnainvadaliwala",
+  "html_url": "https://github.com/hasnainvadaliwala",
+  "followers_url": "https://api.github.com/users/hasnainvadaliwala/followers",
+  "following_url": "https://api.github.com/users/hasnainvadaliwala/following{/other_user}",
+  "gists_url": "https://api.github.com/users/hasnainvadaliwala/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/hasnainvadaliwala/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/hasnainvadaliwala/subscriptions",
+  "organizations_url": "https://api.github.com/users/hasnainvadaliwala/orgs",
+  "repos_url": "https://api.github.com/users/hasnainvadaliwala/repos",
+  "events_url": "https://api.github.com/users/hasnainvadaliwala/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/hasnainvadaliwala/received_events",
+  "type": "User",
+  "user_view_type": "public",
+  "site_admin": false,
+  "name": null,
+  "company": null,
+  "blog": "",
+  "location": null,
+  "email": null,
+  "hireable": null,
+  "bio": null,
+  "twitter_username": null,
+  "public_repos": 1,
+  "public_gists": 0,
+  "followers": 0,
+  "following": 0,
+  "created_at": "2024-11-18T10:49:22Z",
+  "updated_at": "2026-01-24T21:08:25Z"
+
+}
+
+
+app.get("/github",(req,res) => {
+    res.json(githubData)            //res.json() is an Express response method that sends data to the client in JSON format.
+})
+
+
 app.get('/', (req, res) => {
     res.send('<h1>Hello hasnain!You can do it</h1>')
 })
@@ -50,7 +95,8 @@ app.listen(port, () => {
 // ✅ The workflow - Edit → Save → Test
 // ✅ Node.js fundamentals - Code loads once, restart to reload
 
-// # After making changes in peoject and let it visible in git also so , In your terminal:
+
+                      // # After making changes in peoject and let it visible in git also so , In your terminal:
 
 // git add .
 // git commit -m "Added new lines"
@@ -58,6 +104,30 @@ app.listen(port, () => {
 
 // # NOW check GitHub
 // // # Your changes will be visible! ✅
+
+
+                                                     // GIT SCENARIO For a NEW Project:
+
+// bash# Step 1: Create GitHub repo on github.com
+// # Step 2: Go to your project folder
+// cd your-project
+
+// # Step 3: Initialize Git
+// git init
+
+// # Step 4: Add remote
+// git remote add origin https://github.com/username/repo-name.git
+
+// # Step 5: Add files
+// git add .
+
+// # Step 6: First commit
+// git commit -m "Initial commit"
+
+// # Step 7: Push to GitHub
+// git push -u origin main
+
+
 
 
                                                     // Express does this automatically:
